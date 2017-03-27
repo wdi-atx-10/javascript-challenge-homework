@@ -1,8 +1,10 @@
 # Javascript Challenge Homework
 
-For this homework we have some Javascript challenges which will use a combination of all the functions of Javascript which you have learned so far. For this homework you have two assigned challenge and one bonus challenge.
+For this homework we have some Javascript challenges which will sharpen what you have learned so far. There are two assigned challenge and one bonus challenge.
 
 For this assignment we will complete the Birthday Countdown and the Letter Count problems. 
+
+The instructions for both of these activities are located in their respected javascript files.
 
 In the Letter Count Challenge, you should be able to split a string of letters and then be able to count the number of specific letters within that string. 
 
