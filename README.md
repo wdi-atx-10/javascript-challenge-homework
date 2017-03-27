@@ -1,1 +1,1 @@
-# javascript-challenge-homework
+# Javascript Challenge Homework
