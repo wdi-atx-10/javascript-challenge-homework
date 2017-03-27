@@ -2,13 +2,11 @@
 
 For this homework we have some Javascript challenges which will use a combination of all the functions of Javascript which you have learned so far. For this homework you have two assigned challenge and one bonus challenge.
 
-The assigned are the Birthday Countdown and the Letter Count. 
+For this assignment we will complete the Birthday Countdown and the Letter Count problems. 
 
 In the Letter Count Challenge, you should be able to split a string of letters and then be able to count the number of specific letters within that string. 
 
 In the Birthday Countdown, we want to be able to input a data and then have a countdown until when that date should be occurring next. 
-
-
 
 ### Bonus:
 
