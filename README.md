@@ -6,7 +6,9 @@ For this homework we have some Javascript challenges which will use a combinatio
 
 ### Bonus:
 
-The Fibonacci Sequence.
+The Fibonacci Sequence is a very common math problem.
+https://en.wikipedia.org/wiki/Fibonacci_number
+With the starter code fill in the code to complete the Fibonacci sequence up to 100. 
 
 
 ## Licensing
