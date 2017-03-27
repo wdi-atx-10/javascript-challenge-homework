@@ -1,4 +1,4 @@
-# Javascript Challenge Homework
+# Javascript Challenge
 
 For this homework we have some Javascript challenges which will sharpen what you have learned so far. There are two assigned challenge and one bonus challenge.
 
