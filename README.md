@@ -4,7 +4,7 @@ For this homework we have some Javascript challenges which will use a combinatio
 
 
 
-###Bonus:
+### Bonus:
 
 The Fibonacci Sequence.
 
