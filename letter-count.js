@@ -26,3 +26,40 @@
 */
 
 // YOUR CODE HERE
+
+
+
+var characterCountarray = [];
+
+for (var i = 0; i<26; i++){
+  characterCountarray.push(0);
+}
+
+
+var testsentence = prompt("put in a sentence you putz", "")
+testsentence = testsentence.toUpperCase();
+console.log(testsentence);
+
+for(var i = 0; i < testsentence.length; i++){
+  var charcodeval = testsentence.charCodeAt(i);
+  if (charcodeval >= 65 && charcodeval <= 90){
+    characterCountarray[charcodeval-65]++;
+  }
+}
+
+console.log(characterCountarray);
+var totalpercent = 0;
+
+
+for (var i = 0; i<26; i++){
+  totalpercent = characterCountarray[i] + totalpercent;
+}
+
+if (totalpercent>0) {
+  for (var i = 0; i<26; i++){
+    characterCountarray[i] = characterCountarray[i]/totalpercent;
+  }
+  console.log(characterCountarray);
+}else{
+  console.log("You have not printed any alphabetic characters");
+}
