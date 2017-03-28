@@ -27,3 +27,16 @@
 */
 
 // YOUR CODE HERE
+
+function getDifference(y,m,d){
+  var date = y + '.' + m + '.' + d;
+  console.log(date);
+  var difference = new Date().getTime() - new Date(date).getTime();
+  var seconds = difference / 1000;
+  var minutes = seconds / 60;
+  var hours = minutes / 60;
+  var days = hours / 24;
+  var years = days / 365;
+
+  return Math.floor(years) + ' years!';
+}
