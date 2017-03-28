@@ -27,3 +27,35 @@
 */
 
 // YOUR CODE HERE
+function daysUntilDate(date) {
+  var now = Date.now();
+  var future = Date.parse(date);
+  var daysUntil = Math.round((future-now)/86400000);
+  //console.log(daysUntil);
+  return daysUntil;
+
+}
+
+function birthdayReminder(birthdays) {
+  birthdays.sort(function(a, b) {
+    return Date.parse(a.dob) - Date.parse(b.dob);
+});
+  for (var i=0;i<birthdays.length; i++) {
+    var bD = daysUntilDate(birthdays[i].dob);
+    var nM = birthdays[i].name;
+    console.log(nM+"'s birthday is in "+bD+" days.")
+  }
+}
+
+//daysUntilDate('04/10/2017');
+
+birthdayReminder([
+    {
+      name: "Jack",
+      dob: "10/31/2017"
+    },
+    {
+      name: "Jill",
+      dob: "4/01/2017"
+    }
+  ]);
