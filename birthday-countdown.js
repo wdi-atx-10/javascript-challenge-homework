@@ -27,3 +27,55 @@
 */
 
 // YOUR CODE HERE
+var now = new Date;
+
+function daysUntilDate(date) {
+  var future = Date.parse(date);
+  var daysUntil = Math.round((future-now)/86400000);
+  //console.log(daysUntil);
+  return daysUntil;
+
+}
+
+function birthdayReminder(birthdays) {
+
+  for (var i=0;i<birthdays.length; i++) {
+    var oldBD = birthdays[i].dob.split('/');
+
+    oldBD[2]= now.getFullYear();
+      var newBD = oldBD.join('/');
+      birthdays[i].dob = newBD;
+
+    if (Date.parse(now)>Date.parse(birthdays[i].dob)) {
+      oldBD[2]= 1+now.getFullYear();
+      var newBD = oldBD.join('/');
+      birthdays[i].dob = newBD;
+    }
+
+    birthdays[i].DUB = daysUntilDate(birthdays[i].dob);
+    var nM = birthdays[i].name;
+
+  }
+  birthdays.sort(function(a, b) {
+  return a.DUB - b.DUB;
+});
+
+  for (var i=0;i<birthdays.length;i++) {
+    var bD = birthdays[i].DUB;
+    var nM = birthdays[i].name;
+    console.log(nM+"'s birthday is in "+bD+" days.")
+  }
+}
+
+//daysUntilDate('04/10/2017');
+
+birthdayReminder([
+    {
+      name: "Jack",
+      dob: "1/31/1975"
+    },
+    {
+      name: "Jill",
+      dob: "4/01/1989"
+    }
+  ]);
