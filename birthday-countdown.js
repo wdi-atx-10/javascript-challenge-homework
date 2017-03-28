@@ -27,8 +27,9 @@
 */
 
 // YOUR CODE HERE
+var now = new Date;
+
 function daysUntilDate(date) {
-  var now = Date.now();
   var future = Date.parse(date);
   var daysUntil = Math.round((future-now)/86400000);
   //console.log(daysUntil);
@@ -37,11 +38,30 @@ function daysUntilDate(date) {
 }
 
 function birthdayReminder(birthdays) {
-  birthdays.sort(function(a, b) {
-    return Date.parse(a.dob) - Date.parse(b.dob);
-});
+
   for (var i=0;i<birthdays.length; i++) {
-    var bD = daysUntilDate(birthdays[i].dob);
+    var oldBD = birthdays[i].dob.split('/');
+
+    oldBD[2]= now.getFullYear();
+      var newBD = oldBD.join('/');
+      birthdays[i].dob = newBD;
+
+    if (Date.parse(now)>Date.parse(birthdays[i].dob)) {
+      oldBD[2]= 1+now.getFullYear();
+      var newBD = oldBD.join('/');
+      birthdays[i].dob = newBD;
+    }
+
+    birthdays[i].DUB = daysUntilDate(birthdays[i].dob);
+    var nM = birthdays[i].name;
+
+  }
+  birthdays.sort(function(a, b) {
+  return a.DUB - b.DUB;
+});
+
+  for (var i=0;i<birthdays.length;i++) {
+    var bD = birthdays[i].DUB;
     var nM = birthdays[i].name;
     console.log(nM+"'s birthday is in "+bD+" days.")
   }
@@ -52,10 +72,10 @@ function birthdayReminder(birthdays) {
 birthdayReminder([
     {
       name: "Jack",
-      dob: "10/31/2017"
+      dob: "1/31/1975"
     },
     {
       name: "Jill",
-      dob: "4/01/2017"
+      dob: "4/01/1989"
     }
   ]);
