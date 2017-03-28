@@ -11,12 +11,15 @@ function main(){
       {
         name: "Jill",
         dob: "4/01/1975"
+      },
+      {
+        name: "James",
+        dob: "6/07/1985"
       }
     ];
 
 
   birthdayReminder(birthdayArray);
-
 
 }
 
@@ -31,7 +34,14 @@ function birthdayReminder(birthdayArray){
       bday.setFullYear(bday.getFullYear() + 1);
     }
   var diff = Math.floor((bday-currentDate)/oneDay);
-  console.log(name + "'s birthday is in "+ diff + ' days.');
+  birthdayArray[i].daysUntilBirthday = diff;
+
+  }
+  birthdayArray.sort(function(a,b){
+    return parseFloat(a.daysUntilBirthday) - parseFloat(b.daysUntilBirthday);
+  });
+  for (i=0,x=birthdayArray.length;i<x;i++){
+      console.log(birthdayArray[i].name + "'s birthday is in "+ birthdayArray[i].daysUntilBirthday + ' days.');
   }
 }
 
