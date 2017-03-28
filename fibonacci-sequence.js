@@ -7,3 +7,15 @@ for (var i=2; i<=stop; i++) {
 }
 
 console.log(sequence.join());
+
+
+function fib(){
+  var f = [0,1];
+
+  for(var i=0; i<n; i++){
+    f.push(f[i] + f[i+1]);
+  }
+  return f;
+}
+
+fib(100)
