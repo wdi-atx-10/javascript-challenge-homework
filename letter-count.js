@@ -25,4 +25,11 @@
     ```
 */
 
-// YOUR CODE HERE
+
+function letterCount(string) {
+  var all_letters = {};
+  for(var i=0; i<string.length; i++){
+    all_letters[string[i]] = all_letters[string[i]] + 1 || 1;
+  }
+  return all_letters;
+}
