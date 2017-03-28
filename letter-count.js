@@ -26,3 +26,20 @@
 */
 
 // YOUR CODE HERE
+
+function letterCount(str, letter)
+{
+ var letterNum = 0;
+ for (var position = 0; position < str.length; position++)
+ {
+    if (str.charAt(position) == letter)
+      {
+      letterNum += 1;
+      }
+  }
+  return letterNum;
+}
+
+console.log(letterCount('the rain in spain', 'i'));
+
+// checked in repl.it, returns 3
