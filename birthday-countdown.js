@@ -27,3 +27,58 @@
 */
 
 // YOUR CODE HERE
+// to test a function and get back its return
+// function printElapsedTime(fTest) {
+//   var nStartTime = Date.now(),
+//       vReturn = fTest(),
+//       nEndTime = Date.now();
+//
+//   console.log('Elapsed time: ' + String(nEndTime - nStartTime) + ' milliseconds');
+//   return vReturn;
+// }
+
+var today = new Date();
+var birthday = new Date(1965, 03, 28)
+var elapsedTime = (today - birthday);
+
+var years = parseInt(elapsedTime * 3.1689E-11);
+var months = parseInt(elapsedTime * 3.8027E-10);
+var days = parseInt(elapsedTime * 1.1574E-8);
+
+// yourFunctionReturn = printElapsedTime(yourFunction);
+
+console.log(today);
+console.log(years);
+console.log(months, days);
+
+console.log(new Date().getTime());
+console.log(new Date('1965 March 28').getTime());
+console.log(new Date().getTime() - new Date('1965 March 28').getTime());
+
+var difference = new Date().getTime() - new Date('1965 March 28').getTime();
+var seconds = difference / 1000;
+var minutes = seconds / 60;
+var hours = minutes / 60;
+var days = hours / 24;
+var years = days / 365;
+
+console.log(years);
+
+var y = 1965;
+var m = 3;
+var d = 28;
+
+function getDifference(y,m,d){
+  var date = y + '.' + m + '.' + d;
+  console.log(date);
+  var difference = new Date().getTime() - new Date(date).getTime();
+  var seconds = difference / 1000;
+  var minutes = seconds / 60;
+  var hours = minutes / 60;
+  var days = hours / 24;
+  var years = days / 365;
+
+  return Math.floor(years) + ' years!';
+}
+
+getDifference(y,m,d);
