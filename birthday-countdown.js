@@ -27,3 +27,19 @@
 */
 
 // YOUR CODE HERE
+var y = 2011;
+var m = 3;
+var d = 17;
+
+function findDifferent(y, m, d) {
+  var date = y + '.' + m +'.' + d;
+  console.log(date);
+  var difference = (new Date() - new Date(date)) / 1000;
+  var minutes = difference / 60;
+  var hours = minutes / 60;
+  var days = hours / 24;
+  var years = days / 365;
+  return years;
+}
+
+findDifferent(y, m, d);
