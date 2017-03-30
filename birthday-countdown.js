@@ -27,3 +27,41 @@
 */
 
 // YOUR CODE HERE
+
+function daysUntilDate(date) {
+  var month = date.substr(0,2)-1;
+  var day = date.substr(3,2);
+  var year = new Date().getFullYear();
+  var today = new Date;
+  var checkDate = new Date(year, month, day);
+  // var birthday = new Date(1995, 11, 17);
+
+  d = Math.floor((checkDate-today)/86400000);
+
+  return d
+}
+
+daysUntilDate('04/16/2017');
+
+var birthdays = [
+    {
+      name: "Jack",
+      dob: "10/31/2013"
+    },
+    {
+      name: "Jill",
+      dob: "04/01/1975"
+    }];
+
+  //=> [
+  //      "Jack's birthday is in 75 days",
+  //      "Jill's birthday is in 305 days"
+  //    ]
+
+ function birthdayReminder(b) {
+   for (var i = 0, x= b.length; i<x; i++){
+     console.log(b[i].name + 's birthday is in ' + daysUntilDate(b[i].dob) + ' days');
+   }
+ }
+
+ birthdayReminder(birthdays);
