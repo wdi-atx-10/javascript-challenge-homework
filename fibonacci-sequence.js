@@ -7,3 +7,8 @@ for (var i=2; i<=stop; i++) {
 }
 
 console.log(sequence.join());
+
+
+for (var i=2; i<=102; i++) {
+  sequence[i] = sequence[i-2] + sequence[i-1];
+}
