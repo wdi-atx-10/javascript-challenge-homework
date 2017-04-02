@@ -26,4 +26,28 @@
   - To make your output more relevant, can you sort by days remaining (ascending)?
 */
 
+//PseudoCode
+
+//get user input of date
+//change date to 11/11/2017 format if not entered by user that way
+//save date
+//calculate date from todays date
+//display days until
+
 // YOUR CODE HERE
+//this only does one birthday
+
+var myBirthday, today, bday, diff, days;
+myBirthday = [11,8];
+today = new Date();
+bday = new Date(today.getFullYear(),myBirthday[1]-1,myBirthday[0]);
+if( today.getTime() > bday.getTime()) {
+    bday.setFullYear(bday.getFullYear()+1);
+}
+diff = bday.getTime()-today.getTime();
+days = Math.floor(diff/(1000*60*60*24));
+console.log("Days until birthday: " + days);
+//=> [
+//      "Jack's birthday is in 75 days",
+//      "Jill's birthday is in 305 days"
+//    ]
