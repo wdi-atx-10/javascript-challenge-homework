@@ -23,21 +23,4 @@
       "e": 0.2
     }
     ```
-*/
-//Jacob's code
-// YOUR CODE HERE
-function letterCount(w) {
-  var noPunc=w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '');
-  var noSpaces=noPunc.replace(/\s/g, '');
-  var lcw=noSpaces.toLowerCase();
-  var word=lcw.split('');
-  letters={};
-  for (var i=0;i<word.length;i++) {
-    if (!letters[word[i]]) {
-      letters[word[i]]=1/word.length;
-    } else {
-      letters[word[i]]+=(1/word.length);
-    }
-  }
-  console.log(letters);
-}
+*
