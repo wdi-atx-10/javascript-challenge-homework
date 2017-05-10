@@ -10,6 +10,7 @@
     "e": 1
   }
   ```
+
   Bonuses
   - Make sure that lower case letters and upper case letters count for the same character.
   - Ignore spaces, special characters, and punctuation.
@@ -26,3 +27,19 @@
 */
 
 // YOUR CODE HERE
+// use regex?
+// googled how to replace a character
+
+function letterCount(string) {
+ var freq = {};
+ for (var i=0; i<string.length; i++) {
+   var character = string.charAt(i);
+   if (freq[character]) {
+     freq [character]++;
+   } else {
+     freq[character] = 1;
+   }
+ }
+ return freq
+};
+letterCount('')
