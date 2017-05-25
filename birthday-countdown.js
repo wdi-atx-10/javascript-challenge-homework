@@ -27,3 +27,56 @@
 */
 
 // YOUR CODE HERE
+
+$(document).ready(function() {
+  // var minutes = 1000 * 60;
+  // var hours = minutes * 60;
+  // var days = hours * 24;
+  // var years = days * 365;
+  var now = Date.now();
+  function daysUntilDate(bday){
+  var today = new Date();
+  var birthday = new Date(bday);
+  return today-birthday;
+}
+
+function birthdayReminder(people){
+  var theThing = [];
+  for (var i = 0; i < people.length; i++) {
+    var dob = people[i].bday;
+    var name = people[i].name;
+
+    var bdayArr = bday.split('/');
+    var result = daysUntilNext(bdayArr[0], bdayArr[1]); // 45
+
+    var bdayReminder = (name + '`s birthday is in ' + result + ' days');
+    theThing.push(bdayReminder);
+  }
+  return theThing;
+}
+
+function daysUntilNext(month, day){
+    var tday= new Date(), y= tday.getFullYear(), next= new Date(y, month-1, day);
+    tday.setHours(0, 0, 0, 0);
+    if(tday>next) next.setFullYear(y+1);
+    return Math.round((next-tday)/8.64e7);
+}
+
+
+  var birthdayReminder = ([
+    {
+      name: "Jack",
+      dob: "10/31/2013"
+    },
+    {
+      name: "Jill",
+      dob: "4/01/1975"
+    },
+    {
+      name: "Andrew",
+      dob: "5/12/1983"
+    }]);
+
+
+
+});
