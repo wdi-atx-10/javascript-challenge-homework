@@ -26,3 +26,22 @@
 */
 
 // YOUR CODE HERE
+
+$(document).ready(function() {
+
+
+function letterCount(word) {
+var count = 0;
+var arrLetters = {};
+ //loop through the word
+  for (i = 0; i < word.length; i++) {
+     //if the character in the word is equal to  the character passed in as a parameter increment count
+     arrLetters[word[i]] = arrLetters[word[i]] + 1 || 1
+}
+return arrLetters;
+//return the sentence.
+// console.log("The letter " + character + " appears " + count + " times in the word " + word );
+}
+letterCount("mississippi");
+
+});
